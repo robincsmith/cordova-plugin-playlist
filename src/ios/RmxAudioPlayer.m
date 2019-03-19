@@ -1456,17 +1456,6 @@ static char kPlayerItemTimeRangesContext;
     _commandCenterRegistered = NO;
 }
 
-- (void) onMemoryWarning
-{
-    // override to remove caches, etc
-    [super onMemoryWarning];
-
-    // Well, we've just destroyed everything, but ok.
-    [self removeAllTracks:YES];
-    NSLog(@"RmxAudioPlayer, queuePlayerCleared, MEMORY_WARNING");
-    [self onStatus:RMXSTATUS_PLAYLIST_CLEARED trackId:@"INVALID" param:@{@"reason": @"memory-warning"}];
-}
-
 - (void) onReset
 {
     // Override to cancel any long-running requests when the WebView navigates or refreshes.
