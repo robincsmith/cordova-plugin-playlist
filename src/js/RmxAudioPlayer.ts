@@ -367,6 +367,13 @@ export class RmxAudioPlayer {
     exec(successCallback, errorCallback, 'RmxAudioPlayer', 'getQueuePosition', []);
   }
 
+  /**
+   * Reports the number of tracks currently on the playlist.
+   */
+  getTrackCount = (successCallback: SuccessCallback, errorCallback: ErrorCallback) => {
+    exec(successCallback, errorCallback, 'RmxAudioPlayer', 'getTrackCount', []);
+  }
+
 
   /**
    * Status event handling

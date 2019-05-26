@@ -256,6 +256,12 @@ export class CordovaAudioPlayerService {
     }).catch((ex) => console.warn(ex));
   }
 
+  getTrackCount = () => {
+    return this.wrapPromise('getTrackCount', (resolve, reject) => {
+      this.AudioPlayer.getTrackCount(this.getSuccessCb(resolve), this.getErrorCb(reject));
+    }).catch((ex) => console.warn(ex));
+  }
+
 
   /**
    * Private helper methods

@@ -293,6 +293,10 @@ function () {
       exec(successCallback, errorCallback, 'RmxAudioPlayer', 'getQueuePosition', []);
     });
 
+    _defineProperty(this, "getTrackCount", function (successCallback, errorCallback) {
+      exec(successCallback, errorCallback, 'RmxAudioPlayer', 'getTrackCount', []);
+    });
+
     _defineProperty(this, "validateTracks", function (items) {
       if (!items || !Array.isArray(items)) {
         return [];

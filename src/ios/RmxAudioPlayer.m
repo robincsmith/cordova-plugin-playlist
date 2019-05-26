@@ -402,6 +402,14 @@ static char kPlayerItemTimeRangesContext;
     [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 
+- (void) getTrackCount:(CDVInvokedUrlCommand *) command {
+    int trackCount = [self avQueuePlayer].itemsForPlayer.count;
+    NSLog(@"RmxAudioPlayer.execute=getTrackCount, %d", trackCount);
+
+    CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsInt:trackCount];
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+}
+
 
 - (void) release:(CDVInvokedUrlCommand*)command {
     NSLog(@"RmxAudioPlayer.execute=release");

@@ -184,6 +184,10 @@ export declare class RmxAudioPlayer {
      */
     getQueuePosition: (successCallback: SuccessCallback, errorCallback: ErrorCallback) => void;
     /**
+     * Reports the number of tracks currently on the playlist.
+     */
+    getTrackCount: (successCallback: SuccessCallback, errorCallback: ErrorCallback) => void;
+    /**
      * Status event handling
      */
     /**
